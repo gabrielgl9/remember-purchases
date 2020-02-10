@@ -15,8 +15,7 @@ export class AuthService {
     console.log({
       url: 'login',
       body: {
-        email: params.get('email').value,
-        password: params.get('password').value
+        ...params
       }
     });
   }
@@ -32,6 +31,6 @@ export class AuthService {
         email: params.get('email').value,
         password: params.get('password').value,
       }
-    })
+    });
   }
 }

@@ -13,6 +13,9 @@ export class LoginComponent implements OnInit {
   /** Login Form */
   loginForm: FormGroup;
 
+  /** Loading */
+  loading = false;
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -42,19 +45,19 @@ export class LoginComponent implements OnInit {
    *
    */
   onSubmit() {
-    try {
+    this.loading = true;
 
-      // Verify if form is valid
-      if (this.loginForm.valid) {
+    try {
+      if (!this.loginForm.valid) {
         throw new Error('Formulário inválido');
       }
 
-      // Submit to API
-      this.authService.login(this.loginForm);
+      this.authService.login(this.loginForm.value);
+      // this.router.navigate(['/menu/dashboard']);
     } catch (e) {
-
+      console.log(e);
     } finally {
-      this.router.navigate(['/menu/dashboard']);
+      this.loading = false;
     }
   }
 
