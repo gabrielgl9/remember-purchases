@@ -4,14 +4,14 @@
 
     <h2 class="text-center">Entre agora na plataforma</h2>
 
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
         <div class="row">
             <div class="col flex-center">
 
                 <div class="form-group w-75">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" class="form-control">
+                    <input type="email" [formControl]="email" id="email" class="form-control">
                 </div>
 
             </div>
@@ -22,7 +22,7 @@
 
                 <div class="form-group w-75">
                     <label for="password">Senha</label>
-                    <input type="password" id="password" class="form-control">
+                    <input type="password" [formControl]="password" id="password" class="form-control">
                 </div>
 
             </div>
@@ -30,7 +30,7 @@
 
         <div class="row text-center pt-2">
             <div class="col">
-                <button class="btn btn-primary w-75" type="submit">Logar</button>
+                <button class="btn btn-primary w-75" type="submit" [disabled]="!loginForm.valid">Logar</button>
             </div>
         </div>
 
