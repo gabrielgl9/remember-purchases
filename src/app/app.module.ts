@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthModule } from './auth/auth.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HelpersComponent } from './helpers/helpers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthComponent
+    AuthComponent,
+    HelpersComponent
   ],
   imports: [
     BrowserModule,
