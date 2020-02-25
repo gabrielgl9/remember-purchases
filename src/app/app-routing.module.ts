@@ -1,3 +1,4 @@
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './auth/forget-password/forget-password.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'forget-password',
     component: ForgetPasswordComponent
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent
   }
 ];
 

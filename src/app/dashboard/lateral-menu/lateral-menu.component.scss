@@ -1,0 +1,8 @@
+.content {
+    height: 100vh;
+    background: var(--rp-default-blue-color);
+    #menu-list li:hover {
+        background: var(--rp-red-color);
+        cursor: pointer;
+    }
+}

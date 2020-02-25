@@ -1,3 +1,5 @@
+import { DashboardModule } from './dashboard/dashboard.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,11 +14,13 @@ import { HelpersComponent } from './helpers/helpers.component';
   declarations: [
     AppComponent,
     AuthComponent,
-    HelpersComponent
+    HelpersComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    DashboardModule,
     AuthModule,
     HttpClientModule,
     NoopAnimationsModule
