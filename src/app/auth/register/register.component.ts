@@ -47,7 +47,7 @@ export class RegisterComponent implements OnInit {
     try {
 
       // Verify if form is valid
-      if (this.registerForm.valid) {
+      if (!this.registerForm.valid) {
         throw new Error('Formulário inválido');
       }
 
@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
     } catch (e) {
       console.log(e);
     } finally {
-      this.router.navigate(['/menu/dashboard']);
+      // this.router.navigate(['/menu/dashboard']);
     }
   }
 
