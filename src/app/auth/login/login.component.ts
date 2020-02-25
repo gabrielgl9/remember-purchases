@@ -51,11 +51,11 @@ export class LoginComponent implements OnInit {
     this.loading = true;
 
     try {
-      if (this.loginForm.valid) {
+      if (!this.loginForm.valid) {
         throw new Error('Formulário inválido');
       }
 
-      this.authService.login(this.loginForm.value);
+      this.authService.login(this.loginForm);
       // this.router.navigate(['/menu/dashboard']);
     } catch (e) {
       this.openModal(e.message);

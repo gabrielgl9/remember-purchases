@@ -14,13 +14,14 @@ export class AuthService {
    * It do login
    *
    */
-  login(params) {
-    console.log({
+  async login(params) {
+    return await this.server.post({
       url: 'login',
       body: {
-        ...params
+        email: params.get('email').value,
+        password: params.get('password').value
       }
-    });
+    }).toPromise();
   }
 
   /**
