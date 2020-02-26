@@ -1,3 +1,4 @@
+import { FamilyComponent } from './family/family.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ForgetPasswordComponent } from './auth/forget-password/forget-password.component';
 import { RegisterComponent } from './auth/register/register.component';
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'family',
+    component: FamilyComponent
   }
 ];
 

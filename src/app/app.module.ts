@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthModule } from './auth/auth.module';
 import { HelpersComponent } from './helpers/helpers.component';
+import { FamilyComponent } from './family/family.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     HelpersComponent,
-    DashboardComponent
+    DashboardComponent,
+    FamilyComponent
   ],
   imports: [
     BrowserModule,
